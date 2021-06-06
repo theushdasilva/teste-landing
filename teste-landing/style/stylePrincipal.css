@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;0,900;1,100&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    
+    /*---Variveis de cores---*/
+    --color1: #FFFFFF;
+    --color2: #E2E2E2;
+    --color3: #707070;
+    --color4: #0B6699;
+    --color5: #931854;
+
+    /*---Variaveis de font---*/
+    --fontTitle: 'Lato', sans-serif;
+    --fontBody: 'Montserrat', sans-serif;
+}
+
+@media(max-width: 1080px){
+    html{
+        font-size: 93.75%;
+    }
+  }
+  
+@media(max-width: 720px){
+    html{
+        font-size: 87.5%;
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    cursor: pointer;
+}
+
+body{
+    background-color: var(--color2);
+
+    font-family: var(--fontBody);
+}
+
+/*alinhamento de divs*/
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+.esquerda{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.direita{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+
+/*Classes variadas*/
+.btnMenu{
+    display: none;
+}
+.btnclose{
+    display: none;
+}
+
+.menu{
+    position: fixed;
+    
+    background: none;
+
+    width: 100%;
+    height: 100px;
+
+    padding: 0 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 999;
+}
+.menu ul{
+    list-style: none;
+} 
+.menu li{
+    display: inline;
+
+    font-weight: 500;
+
+    margin: 0px 20px;
+} 
+.menu li > a{
+    color: var(--color5);
+} 
+
+.conatiner-per{
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    background-image: url(../img/fundo1.png);
+    background-position: center;
+    background-size: cover;
+
+    z-index: 1;
+}
+.conatiner-per .box{
+    position: relative;
+
+    width: 100%;
+    max-width: 1000px;
+
+    margin-left: 140px;
+    top: 100px;
+}
+.conatiner-per .box h1{
+    font-family: var(--fontTitle);
+    font-size: 8rem;
+    font-weight: 900;
+
+    margin-bottom: 30px;
+
+    line-height: .8;
+}
+.conatiner-per .box p{
+    font-family: var(--fontBody);
+    font-size: 1.2rem;
+}
+.conatiner-per .box h1,p{
+    color: var(--color4);
+}
+@media(max-width: 1400px){
+
+    .conatiner-per .box{
+        max-width: 800px;
+    }
+    .conatiner-per .box h1{
+        font-size: 5rem;        
+    }
+    .conatiner-per .box p{
+        font-size: 1rem;
+    }
+
+}
+.ondas{
+    position: absolute;
+    
+    width: 100%;
+    height: 500px;
+
+    background-image: url(../img/Path_4.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.ondas > img{
+    width: 51px;
+    height: 25px;
+
+    margin-bottom: 20px;
+}
+@media(max-width: 1400px){
+    .ondas{
+        height: 320px;   
+    }
+  }
+
+
+.seta-row{
+    width: 58pt;
+}
+
+.containerCards{
+    position: relative;
+
+    top: 100px;
+    
+    max-width: 750px;
+}
+.cardPersonalizado{
+    position: relative;
+
+    width: 100%;
+    max-width: 506px;
+
+    margin: 10px 0px 60px 0px;
+
+    background: var(--color1);
+
+    border-radius: 5px;
+
+    box-shadow: 0 0 10px #00000050;
+
+    padding: 10px 20px;
+}
+.cardPersonalizado > h3{
+    font-family: var(--fontTitle);
+    font-weight: 900;
+
+    color: var(--color5);
+
+    margin-top: 60px;
+}
+.cardPersonalizado > p{
+    font-family: var(--fontBody);
+    font-size: .9rem;
+
+    color: var(--color5);
+}
+.Home::before{
+    content: url(../img/homem.png);
+    display: block;
+
+    position: absolute;
+
+    right: 30px;
+    top: -40px;
+}
+.Mulher::before{
+    content: url(../img/mulher.png);
+    display: block;
+
+    position: absolute;
+
+    right: 30px;
+    top: -40px;
+}
+
+.end{
+    position: relative;
+
+    top: 100px;
+
+    color: var(--color5);
+}
+.end h1{
+    font-size: 6rem;
+    font-weight: 900;
+
+    margin-bottom: 40px;
+
+    font-family: var(--fontTitle);
+}
+.end p{
+    font-family: var(--fontBody);
+
+    color: var(--color5);
+}
+.end .box{
+    background: var(--color1);
+
+    text-align: center;
+
+    padding: 30px 50px;
+
+    border-radius: 10px;
+
+    margin-top: 120px;
+
+    box-shadow: 0 0 10px #00000050;
+}
+.end .box h4{
+    margin-bottom: 20px;
+}
+.end .box p{
+    font-size: 1.1rem;
+}
